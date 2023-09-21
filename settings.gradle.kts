@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "MultiProjectGradleSampe"
-include(":app")
+include(":sample")
  
