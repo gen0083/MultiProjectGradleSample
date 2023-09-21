@@ -1,4 +1,5 @@
 pluginManagement {
+    includeBuild("gradle-share")
     repositories {
         google()
         mavenCentral()
