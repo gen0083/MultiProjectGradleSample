@@ -1,5 +1,5 @@
 plugins {
-    id("com.android.application")
+    id("gradleshare.plugin.android")
     id("org.jetbrains.kotlin.android")
 }
 

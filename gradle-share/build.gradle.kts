@@ -25,3 +25,12 @@ dependencies {
     // https://github.com/google/dagger/issues/3068#issuecomment-1470534930
     implementation(libs.javaPoet)
 }
+
+gradlePlugin {
+    plugins {
+        register("androidApplication") {
+            id = "gradleshare.plugin.android"
+            implementationClass = "jp.gcreate.gradleshare.plugin.AndroidApplicationPlugin"
+        }
+    }
+}
