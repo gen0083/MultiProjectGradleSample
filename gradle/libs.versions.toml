@@ -1,5 +1,9 @@
 [versions]
 androidGradlePlugin = "8.1.1"
+targetSdk = "33"
+minSdk = "23"
+compileSdk = "34"
+
 # For updating Kotlin and Compose Compiler version, see:
 # https://github.com/JetBrains/compose-multiplatform/blob/master/VERSIONING.md#kotlin-compatibility
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin?#pre-release_kotlin_compatibility

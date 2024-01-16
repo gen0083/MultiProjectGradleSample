@@ -27,11 +27,11 @@ fun Project.setupAndroid() {
         namespace?.let {
             this.namespace = it
         }
-        compileSdkVersion(34)
+        compileSdkVersion(libs.version("compileSdk").toInt())
 
         defaultConfig {
-            minSdk = 23
-            targetSdk = 33
+            minSdk = libs.version("minSdk").toInt()
+            targetSdk = libs.version("targetSdk").toInt()
         }
 
         compileOptions {
