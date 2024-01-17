@@ -29,7 +29,7 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplication") {
-            id = "gradleshare.plugin.android"
+            id = "jp.gcreate.android.application"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidApplicationPlugin"
         }
     }
