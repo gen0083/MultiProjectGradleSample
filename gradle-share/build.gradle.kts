@@ -32,5 +32,9 @@ gradlePlugin {
             id = "jp.gcreate.android.application"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidApplicationPlugin"
         }
+        register("ossLicensesPlugin") {
+            id = "jp.gcreate.ossLicenses"
+            implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
+        }
     }
 }
