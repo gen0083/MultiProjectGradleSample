@@ -1,17 +1,15 @@
 plugins {
     id("jp.gcreate.android.application")
     id("jp.gcreate.android.kotlin")
+    id("jp.gcreate.android.compose")
     id("jp.gcreate.ossLicenses")
 }
 
 android {
     namespace = "jp.gcreate.sample.multiprojectgradlesampe"
-    compileSdk = 33
 
     defaultConfig {
         applicationId = "jp.gcreate.sample.multiprojectgradlesampe"
-        minSdk = 24
-        targetSdk = 33
         versionCode = 1
         versionName = "1.0"
 
