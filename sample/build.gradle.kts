@@ -1,6 +1,7 @@
 plugins {
     id("jp.gcreate.android.application")
     id("org.jetbrains.kotlin.android")
+    id("jp.gcreate.ossLicenses")
 }
 
 android {
