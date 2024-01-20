@@ -1,6 +1,6 @@
 plugins {
     id("jp.gcreate.android.application")
-    id("org.jetbrains.kotlin.android")
+    id("jp.gcreate.android.kotlin")
     id("jp.gcreate.ossLicenses")
 }
 
@@ -26,13 +26,6 @@ android {
                 "proguard-rules.pro"
             )
         }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
-    }
-    kotlinOptions {
-        jvmTarget = "1.8"
     }
 }
 
