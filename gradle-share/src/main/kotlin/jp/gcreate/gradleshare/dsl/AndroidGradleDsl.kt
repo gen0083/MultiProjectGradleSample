@@ -18,7 +18,6 @@ fun Project.androidLibrary(action: LibraryExtension.() -> Unit) {
 }
 
 fun Project.android(action: TestedExtension.() -> Unit) {
-    println("this is test !")
     extensions.configure(action)
 }
 
