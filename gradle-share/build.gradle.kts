@@ -32,6 +32,10 @@ gradlePlugin {
             id = "jp.gcreate.android.application"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidApplicationPlugin"
         }
+        register("androidKotlin") {
+            id = "jp.gcreate.android.kotlin"
+            implementationClass = "jp.gcreate.gradleshare.plugin.AndroidKotlinPlugin"
+        }
         register("ossLicensesPlugin") {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
