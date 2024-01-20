@@ -7,18 +7,18 @@ compileSdk = "34"
 # For updating Kotlin and Compose Compiler version, see:
 # https://github.com/JetBrains/compose-multiplatform/blob/master/VERSIONING.md#kotlin-compatibility
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin?#pre-release_kotlin_compatibility
-kotlin = "1.9.0"
+kotlin = "1.9.22"
 
 androidxCore = "1.12.0"
 androidDesugarJdkLibs = "2.0.3"
-compose = "2023.09.00"
-composeCompiler = "1.5.2"
+compose = "2023.10.01"
+composeCompiler = "1.5.8"
 composeJb = "1.5.0"
 composeMaterial3 = "1.2.0-alpha07"
 composeHiltNavigatiaon = "1.0.0"
 androidxLifecycle = "2.6.2"
-androidxActivity = "1.8.0-beta01"
-androidxFragment = "1.6.1"
+androidxActivity = "1.8.2"
+androidxFragment = "1.6.2"
 androidxSplashScreen = "1.0.1"
 kotlinxCoroutines = "1.7.3"
 accompanist = "0.30.1"
