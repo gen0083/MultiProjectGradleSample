@@ -40,6 +40,14 @@ gradlePlugin {
             id = "jp.gcreate.android.compose"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidComposePlugin"
         }
+        register("androidFirebase") {
+            id = "jp.gcreate.android.firebase"
+            implementationClass = "jp.gcreate.gradleshare.plugin.AndroidFirebasePlugin"
+        }
+        register("androidCrashlytics") {
+            id = "jp.gcreate.android.crashlytics"
+            implementationClass = "jp.gcreate.gradleshare.plugin.AndroidCrashlyticsPlugin"
+        }
         register("ossLicensesPlugin") {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
