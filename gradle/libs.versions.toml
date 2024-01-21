@@ -33,7 +33,7 @@ ktor = "2.3.4"
 roborazzi = "1.6.0-alpha-3"
 showkase = "1.0.0-beta18"
 ksp = "1.9.0-1.0.13"
-firebaseBom = "32.2.3"
+firebaseBom = "32.7.1"
 multiplatformFirebase = "1.8.1"
 kermit = "1.2.2"
 okHttp = "4.11.0"
@@ -53,7 +53,8 @@ composeJbGradlePlugin = { group = "org.jetbrains.compose", name = "compose-gradl
 hiltGradlePlugin = { group = "com.google.dagger", name = "hilt-android-gradle-plugin", version.ref = "dagger" }
 roborazziGradlePlugin = { group = "io.github.takahirom.roborazzi", name = "roborazzi-gradle-plugin", version.ref = "roborazzi" }
 kspGradlePlugin = { module = "com.google.devtools.ksp:com.google.devtools.ksp.gradle.plugin", version.ref = "ksp" }
-firebaseGradlePlugin = { module = "com.google.gms:google-services", version = "4.3.15" }
+firebaseGradlePlugin = { module = "com.google.gms:google-services", version = "4.4.0" }
+firebaseCrashlyticsGradlePlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.9.9" }
 ktorfitGradlePlugin = { module = "de.jensklingenberg.ktorfit:gradle-plugin", version = "1.0.0" }
 kotlinxSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 completeKotlinPlugin = { module = "com.louiscad.complete-kotlin:plugin", version = "1.1.0" }
@@ -137,7 +138,6 @@ firebaseAuth = { module = "com.google.firebase:firebase-auth" }
 firebaseDynamicLinks = { module = "com.google.firebase:firebase-dynamic-links" }
 multiplatformFirebaseAuth = { module = "dev.gitlive:firebase-auth", version.ref = "multiplatformFirebase" }
 firebaseRemoteConfig = { module = "dev.gitlive:firebase-config", version.ref = "multiplatformFirebase" }
-firebaseCrashlyticsGradlePlugin = { module = "com.google.firebase:firebase-crashlytics-gradle", version = "2.9.9" }
 firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "18.4.1" }
 
 ktorfitLib = { module = "de.jensklingenberg.ktorfit:ktorfit-lib", version.ref = "ktorfit" }
@@ -160,6 +160,7 @@ showkaseRuntime = { group = "com.airbnb.android", name = "showkase", version.ref
 showkaseProcessor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
 
 [plugins]
+# rootでaliasで設定するものをここで指定（aliasでpluginを読み込まない場合は必要ない）
 androidGradlePlugin = { id = "com.android.application", version.ref = "androidGradlePlugin" }
 androidGradleLibraryPlugin = { id = "com.android.library", version.ref = "androidGradlePlugin" }
 kotlinGradlePlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
@@ -171,6 +172,7 @@ detektGradlePlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt
 ossLicensesPlugin = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
 
 [bundles]
+# gradle pluginで読み込む必要があるものを設定
 plugins = [
     "androidGradlePlugin",
     "kotlinGradlePlugin",
