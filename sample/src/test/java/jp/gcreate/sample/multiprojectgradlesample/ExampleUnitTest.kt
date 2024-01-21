@@ -1,4 +1,4 @@
-package jp.gcreate.sample.multiprojectgradlesampe
+package jp.gcreate.sample.multiprojectgradlesample
 
 import org.junit.Test
 

@@ -6,10 +6,10 @@ plugins {
 }
 
 android {
-    namespace = "jp.gcreate.sample.multiprojectgradlesampe"
+    namespace = "jp.gcreate.sample.multiprojectgradlesample"
 
     defaultConfig {
-        applicationId = "jp.gcreate.sample.multiprojectgradlesampe"
+        applicationId = "jp.gcreate.sample.multiprojectgradlesample"
         versionCode = 1
         versionName = "1.0"
 

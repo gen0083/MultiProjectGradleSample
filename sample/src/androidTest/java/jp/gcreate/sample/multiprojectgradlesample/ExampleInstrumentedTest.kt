@@ -1,4 +1,4 @@
-package jp.gcreate.sample.multiprojectgradlesampe
+package jp.gcreate.sample.multiprojectgradlesample
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

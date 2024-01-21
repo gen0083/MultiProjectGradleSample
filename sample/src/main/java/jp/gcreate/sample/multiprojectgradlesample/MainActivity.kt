@@ -1,4 +1,4 @@
-package jp.gcreate.sample.multiprojectgradlesampe
+package jp.gcreate.sample.multiprojectgradlesample
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
