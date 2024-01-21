@@ -12,11 +12,13 @@ import androidx.compose.material3.Text
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.google.android.gms.oss.licenses.OssLicensesMenuActivity
+import jp.gcreate.sample.multiplatformsample.share.Greeting
 import java.lang.RuntimeException
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val greeting = Greeting()
         setContent {
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -34,6 +36,7 @@ class MainActivity : AppCompatActivity() {
                 Button(onClick = { throw RuntimeException("test crash") }) {
                     Text(text = "Test Crash")
                 }
+                Text(text = greeting.greet())
             }
         }
     }
