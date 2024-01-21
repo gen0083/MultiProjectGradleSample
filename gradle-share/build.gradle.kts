@@ -60,6 +60,10 @@ gradlePlugin {
             id = "jp.gcreate.kmp.ios"
             implementationClass = "jp.gcreate.gradleshare.plugin.KmpIosPlugin"
         }
+        register("kotlinMultiplatformJvm") {
+            id = "jp.gcreate.kmp.jvm"
+            implementationClass = "jp.gcreate.gradleshare.plugin.KmpJvmPlugin"
+        }
         register("ossLicensesPlugin") {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
