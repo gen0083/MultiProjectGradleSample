@@ -2,6 +2,8 @@ plugins {
     id("jp.gcreate.android.application")
     id("jp.gcreate.android.kotlin")
     id("jp.gcreate.android.compose")
+    id("jp.gcreate.android.firebase")
+    id("jp.gcreate.android.crashlytics")
     id("jp.gcreate.ossLicenses")
 }
 
