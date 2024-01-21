@@ -16,3 +16,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "MultiProjectGradleSample"
 include(":sample")
+include(":share")

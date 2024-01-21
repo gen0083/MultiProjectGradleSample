@@ -158,6 +158,7 @@ roborazziCompose = { module = "io.github.takahirom.roborazzi:roborazzi-compose",
 roborazziRule = { module = "io.github.takahirom.roborazzi:roborazzi-junit-rule", version.ref = "roborazzi" }
 showkaseRuntime = { group = "com.airbnb.android", name = "showkase", version.ref = "showkase" }
 showkaseProcessor = { group = "com.airbnb.android", name = "showkase-processor", version.ref = "showkase" }
+kotlinTest = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
 
 [plugins]
 # rootでaliasで設定するものをここで指定（aliasでpluginを読み込まない場合は必要ない）
