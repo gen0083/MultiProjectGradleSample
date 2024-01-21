@@ -48,6 +48,18 @@ gradlePlugin {
             id = "jp.gcreate.android.crashlytics"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidCrashlyticsPlugin"
         }
+        register("kotlinMultiplatform") {
+            id = "jp.gcreate.kmp"
+            implementationClass = "jp.gcreate.gradleshare.plugin.KmpPlugin"
+        }
+        register("kotlinMultiplatformAndroid") {
+            id = "jp.gcreate.kmp.android"
+            implementationClass = "jp.gcreate.gradleshare.plugin.KmpAndroidPlugin"
+        }
+        register("kotlinMultiplatformIos") {
+            id = "jp.gcreate.kmp.ios"
+            implementationClass = "jp.gcreate.gradleshare.plugin.KmpIosPlugin"
+        }
         register("ossLicensesPlugin") {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
