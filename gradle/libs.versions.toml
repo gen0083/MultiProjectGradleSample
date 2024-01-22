@@ -46,6 +46,7 @@ twitterComposeRule = "0.0.26"
 lottie = "6.1.0"
 kover = "0.7.3"
 androidxLifecycleProcess = "2.6.2"
+playServicesWearable = "18.1.0"
 
 [libraries]
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -151,6 +152,7 @@ firebaseDynamicLinks = { module = "com.google.firebase:firebase-dynamic-links" }
 multiplatformFirebaseAuth = { module = "dev.gitlive:firebase-auth", version.ref = "multiplatformFirebase" }
 firebaseRemoteConfig = { module = "dev.gitlive:firebase-config", version.ref = "multiplatformFirebase" }
 firebaseCrashlytics = { module = "com.google.firebase:firebase-crashlytics-ktx", version = "18.4.1" }
+play-services-wearable = { group = "com.google.android.gms", name = "play-services-wearable", version.ref = "playServicesWearable" }
 
 ktorfitLib = { module = "de.jensklingenberg.ktorfit:ktorfit-lib", version.ref = "ktorfit" }
 ktorfitKsp = { module = "de.jensklingenberg.ktorfit:ktorfit-ksp", version.ref = "ktorfit" }
