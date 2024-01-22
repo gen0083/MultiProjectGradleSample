@@ -16,6 +16,7 @@ composeCompiler = "1.5.8"
 composeJb = "1.5.0"
 composeMaterial3 = "1.2.0-alpha07"
 composeHiltNavigatiaon = "1.0.0"
+composeWear = "1.2.1"
 androidxLifecycle = "2.6.2"
 androidxActivity = "1.8.2"
 androidxFragment = "1.6.2"
@@ -108,6 +109,14 @@ composeShimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version =
 lottieCompose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 animation-graphics-android = { group = "androidx.compose.animation", name = "animation-graphics-android", version = "1.5.1" }
 
+# wear compose
+wearComposeUiTooling = { module = "androidx.wear.compose:compose-ui-tooling", version.ref = "composeWear" }
+wearComposeFoundation = { group = "androidx.wear.compose", name = "compose-foundation", version.ref = "composeWear" }
+wearComposeMaterial = { module = "androidx.wear.compose:compose-material", version.ref = "composeWear" }
+wearComposeMaterial3 = { module = "androidx.wear.compose:compose-material3", version.ref = "composeWear" }
+
+# androidx
+
 androidxFragment = { module = "androidx.fragment:fragment", version.ref = "androidxFragment" }
 androidxCoreKtx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
 androidxAppCompat = { module = "androidx.appcompat:appcompat", version = "1.7.0-alpha03" }
@@ -117,6 +126,9 @@ androidxDatastoreDatastorePreferences = { module = "androidx.datastore:datastore
 androidxBrowser = { module = "androidx.browser:browser", version = "1.6.0" }
 androidxWindow = { module = "androidx.window:window", version = "1.1.0" }
 androidxSplashScreen = { module = "androidx.core:core-splashscreen", version.ref = "androidxSplashScreen" }
+
+# other
+
 javaPoet = { module = "com.squareup:javapoet", version = "1.13.0" }
 
 # Data

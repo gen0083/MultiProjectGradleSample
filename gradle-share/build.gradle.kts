@@ -40,6 +40,10 @@ gradlePlugin {
             id = "jp.gcreate.android.compose"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidComposePlugin"
         }
+        register("androidComposeWear") {
+            id = "jp.gcreate.android.compose.wear"
+            implementationClass = "jp.gcreate.gradleshare.plugin.AndroidComposeWearPlugin"
+        }
         register("androidFirebase") {
             id = "jp.gcreate.android.firebase"
             implementationClass = "jp.gcreate.gradleshare.plugin.AndroidFirebasePlugin"
