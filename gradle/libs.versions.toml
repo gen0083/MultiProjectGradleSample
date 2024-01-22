@@ -41,10 +41,6 @@ okHttp = "4.11.0"
 ktorfit = "1.6.0"
 ossLicensesPlugin = "0.10.6"
 ossLicenses = "17.0.1"
-detekt = "1.23.1"
-twitterComposeRule = "0.0.26"
-lottie = "6.1.0"
-kover = "0.7.3"
 androidxLifecycleProcess = "2.6.2"
 playServicesWearable = "18.1.0"
 
@@ -60,11 +56,7 @@ firebaseCrashlyticsGradlePlugin = { module = "com.google.firebase:firebase-crash
 ktorfitGradlePlugin = { module = "de.jensklingenberg.ktorfit:gradle-plugin", version = "1.0.0" }
 kotlinxSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 completeKotlinPlugin = { module = "com.louiscad.complete-kotlin:plugin", version = "1.1.0" }
-detektGradlePlugin = { group = "io.gitlab.arturbosch.detekt", name = "detekt-gradle-plugin", version.ref = "detekt" }
-detektFormatting = { group = "io.gitlab.arturbosch.detekt", name = "detekt-formatting", version.ref = "detekt" }
-twitterComposeRule = { module = "com.twitter.compose.rules:detekt", version.ref = "twitterComposeRule" }
 ossLicensesPlugin = { group = "com.google.android.gms", name = "oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
-koverPlugin = { module = "org.jetbrains.kotlinx:kover-gradle-plugin", version.ref = "kover" }
 
 androidDesugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 
@@ -106,8 +98,6 @@ composeHiltNavigtation = { module = "androidx.hilt:hilt-navigation-compose", ver
 composeLintCheck = { module = "com.slack.lint.compose:compose-lint-checks", version = "1.2.0" }
 composeCoil = { module = "io.coil-kt:coil-compose", version = "2.4.0" }
 composeImageLoader = { module = "io.github.qdsfdhvh:image-loader", version = "1.6.7" }
-composeShimmer = { module = "com.valentinilk.shimmer:compose-shimmer", version = "1.0.5" }
-lottieCompose = { module = "com.airbnb.android:lottie-compose", version.ref = "lottie" }
 animation-graphics-android = { group = "androidx.compose.animation", name = "animation-graphics-android", version = "1.5.1" }
 
 # wear compose
@@ -145,6 +135,9 @@ ktorContentNegotiation = { module = "io.ktor:ktor-client-content-negotiation", v
 okHttpCore = { module = "com.squareup.okhttp3:okhttp", version.ref = "okHttp" }
 okHttpLoggingInterceptor = { module = "com.squareup.okhttp3:logging-interceptor", version.ref = "okHttp" }
 okIo = { module = "com.squareup.okio:okio", version = "3.5.0" }
+
+# firebase / google play services
+
 firebaseBom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
 firebaseCommon = { module = "com.google.firebase:firebase-common" }
 firebaseAuth = { module = "com.google.firebase:firebase-auth" }
@@ -182,8 +175,6 @@ kotlinGradlePlugin = { id = "org.jetbrains.kotlin.android", version.ref = "kotli
 hiltGradlePlugin = { id = "com.google.dagger.hilt.android", version.ref = "dagger" }
 roborazziGradlePlugin = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 kspGradlePlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
-kotlinxKover = { id = "org.jetbrains.kotlinx.kover", version.ref = "kover" }
-detektGradlePlugin = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 ossLicensesPlugin = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
 
 [bundles]
@@ -199,8 +190,6 @@ plugins = [
     "ktorfitGradlePlugin",
     "kotlinxSerializationGradlePlugin",
     "completeKotlinPlugin",
-    "detektGradlePlugin",
     "ossLicensesPlugin",
-    "koverPlugin",
     "firebaseCrashlyticsGradlePlugin"
 ]

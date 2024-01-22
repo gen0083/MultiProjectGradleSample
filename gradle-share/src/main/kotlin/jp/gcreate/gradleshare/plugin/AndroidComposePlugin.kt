@@ -43,7 +43,6 @@ class AndroidComposePlugin : Plugin<Project> {
                 implementation(libs.library("composeUiToolingPreview"))
                 implementation(libs.library("androidxLifecycleLifecycleRuntimeKtx"))
                 implementation(libs.library("androidxActivityActivityCompose"))
-                implementation(libs.library("lottieCompose"))
                 testImplementation(libs.library("junit"))
                 testImplementation(libs.library("androidxTestExtJunit"))
                 testImplementation(libs.library("androidxTestEspressoEspressoCore"))
