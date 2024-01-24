@@ -16,8 +16,8 @@ val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
 compileKotlin.kotlinOptions.jvmTarget = "11"
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.toVersion(libs.versions.jvmVersion.get().toInt())
+    targetCompatibility = JavaVersion.toVersion(libs.versions.jvmVersion.get().toInt())
 }
 
 dependencies {

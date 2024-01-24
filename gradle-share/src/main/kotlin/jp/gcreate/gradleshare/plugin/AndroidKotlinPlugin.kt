@@ -5,6 +5,7 @@ import jp.gcreate.gradleshare.dsl.implementation
 import jp.gcreate.gradleshare.dsl.kotlinOptions
 import jp.gcreate.gradleshare.dsl.library
 import jp.gcreate.gradleshare.dsl.libs
+import jp.gcreate.gradleshare.dsl.version
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -18,7 +19,7 @@ class AndroidKotlinPlugin : Plugin<Project> {
                 apply("org.jetbrains.kotlin.android")
             }
             tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile::class.java) {
-                kotlinOptions.jvmTarget = "11"
+                kotlinOptions.jvmTarget = libs.version("jvmVersion")
             }
 
             android {

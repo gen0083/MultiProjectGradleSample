@@ -34,8 +34,8 @@ fun Project.setupAndroid() {
         }
 
         compileOptions {
-            sourceCompatibility = JavaVersion.VERSION_11
-            targetCompatibility = JavaVersion.VERSION_11
+            sourceCompatibility = JavaVersion.toVersion(libs.version("jvmVersion").toInt())
+            targetCompatibility = JavaVersion.toVersion(libs.version("jvmVersion").toInt())
             isCoreLibraryDesugaringEnabled = true
         }
         dependencies {
