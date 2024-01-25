@@ -1,6 +1,7 @@
 package jp.gcreate.gradleshare.plugin
 
 import jp.gcreate.gradleshare.dsl.android
+import jp.gcreate.gradleshare.dsl.androidTestImplementation
 import jp.gcreate.gradleshare.dsl.buildComposeMetricsParameters
 import jp.gcreate.gradleshare.dsl.debugImplementation
 import jp.gcreate.gradleshare.dsl.implementation
@@ -46,9 +47,9 @@ class AndroidComposeWearPlugin : Plugin<Project> {
                 implementation(libs.library("wearComposeMaterial"))
                 // test dependencies
                 testImplementation(libs.library("junit"))
-                testImplementation(libs.library("androidxTestExtJunit"))
-                testImplementation(libs.library("androidxTestEspressoEspressoCore"))
-                testImplementation(libs.library("composeUiTestJunit4"))
+                androidTestImplementation(libs.library("androidxTestExtJunit"))
+                androidTestImplementation(libs.library("androidxTestEspressoEspressoCore"))
+                androidTestImplementation(libs.library("composeUiTestJunit4"))
                 debugImplementation(libs.library("composeUiTooling"))
                 debugImplementation(libs.library("composeUiTestManifest"))
                 lintChecks(libs.library("composeLintCheck"))
