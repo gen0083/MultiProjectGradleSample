@@ -44,6 +44,8 @@ ossLicensesPlugin = "0.10.6"
 ossLicenses = "17.0.1"
 androidxLifecycleProcess = "2.6.2"
 playServicesWearable = "18.1.0"
+gradleVersionUp = "0.51.0"
+versionCatalogUpdate = "0.8.4"
 
 [libraries]
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -58,6 +60,8 @@ ktorfitGradlePlugin = { module = "de.jensklingenberg.ktorfit:gradle-plugin", ver
 kotlinxSerializationGradlePlugin = { module = "org.jetbrains.kotlin:kotlin-serialization", version.ref = "kotlin" }
 completeKotlinPlugin = { module = "com.louiscad.complete-kotlin:plugin", version = "1.1.0" }
 ossLicensesPlugin = { group = "com.google.android.gms", name = "oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
+gradleVersionUpGradlePlugin = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "gradleVersionUp" }
+versionCatalogUpdatePlugin = { module = "nl.littlerobots.vcu:plugin", version.ref = "versionCatalogUpdate" }
 
 androidDesugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 
@@ -177,6 +181,8 @@ hiltGradlePlugin = { id = "com.google.dagger.hilt.android", version.ref = "dagge
 roborazziGradlePlugin = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 kspGradlePlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ossLicensesPlugin = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
+gradleVersionUpPlugin = { id = "com.github.ben-manes.versions", version.ref = "gradleVersionUp" }
+versionCatalogUpdatePlugin = { id = "nl.littlerobots.version-catalog-update", version.ref = "versionCatalogUpdate" }
 
 [bundles]
 # gradle pluginで読み込む必要があるものを設定
@@ -192,5 +198,7 @@ plugins = [
     "kotlinxSerializationGradlePlugin",
     "completeKotlinPlugin",
     "ossLicensesPlugin",
-    "firebaseCrashlyticsGradlePlugin"
+    "firebaseCrashlyticsGradlePlugin",
+    "gradleVersionUpGradlePlugin",
+    "versionCatalogUpdatePlugin",
 ]

@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.androidGradlePlugin) apply false
     alias(libs.plugins.androidGradleLibraryPlugin) apply false
     alias(libs.plugins.kotlinGradlePlugin) apply false
+    id("jp.gcreate.versionCatalogUpdate")
 }
 
 tasks.register("clean", Delete::class) {

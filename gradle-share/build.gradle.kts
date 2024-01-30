@@ -80,5 +80,9 @@ gradlePlugin {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
         }
+        register("versionCatalogUpdatePlugin") {
+            id = "jp.gcreate.versionCatalogUpdate"
+            implementationClass = "jp.gcreate.gradleshare.plugin.VersionCatalogUpdatePlugin"
+        }
     }
 }
