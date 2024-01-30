@@ -1,15 +1,11 @@
 package jp.gcreate.gradleshare.plugin
 
-import nl.littlerobots.vcu.plugin.PinConfiguration
-import nl.littlerobots.vcu.plugin.VersionCatalogConfig
+import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 import nl.littlerobots.vcu.plugin.VersionCatalogUpdateExtension
-import nl.littlerobots.vcu.plugin.versionCatalogUpdate
-import org.gradle.api.Action
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
-import org.jetbrains.kotlin.gradle.targets.js.npm.versionToNpmRanges
+import org.gradle.kotlin.dsl.withType
 
 class VersionCatalogUpdatePlugin : Plugin<Project> {
     override fun apply(target: Project) {
@@ -29,10 +25,23 @@ class VersionCatalogUpdatePlugin : Plugin<Project> {
                     keepUnusedVersions.set(true)
                 }
             }
+            tasks.withType<DependencyUpdatesTask> {
+                rejectVersionIf {
+                    isNonStable(candidate.version) && !isNonStable(currentVersion)
+                }
+            }
         }
     }
 
     private fun Project.versionCatalogUpdate(action: VersionCatalogUpdateExtension.() -> Unit) {
         extensions.configure(action)
+    }
+
+    // see: https://github.com/ben-manes/gradle-versions-plugin#rejectversionsif-and-componentselection
+    private fun isNonStable(version: String): Boolean {
+        val stableKeyword = listOf("RELEASE", "FINAL", "GA").any { version.uppercase().contains(it) }
+        val regex = "^[0-9,.v-]+(-r)?$".toRegex()
+        val isStable = stableKeyword || regex.matches(version)
+        return isStable.not()
     }
 }
