@@ -13,7 +13,7 @@ repositories {
 
 val compileKotlin: org.jetbrains.kotlin.gradle.tasks.KotlinCompile by tasks
 // 最近のAndroidGradlePluginはjvmTarget11が要求されるため
-compileKotlin.kotlinOptions.jvmTarget = "11"
+compileKotlin.kotlinOptions.jvmTarget = libs.versions.jvmVersion.get()
 
 java {
     sourceCompatibility = JavaVersion.toVersion(libs.versions.jvmVersion.get().toInt())
