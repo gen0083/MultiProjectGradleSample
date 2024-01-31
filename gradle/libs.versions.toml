@@ -46,8 +46,12 @@ androidxLifecycleProcess = "2.6.2"
 playServicesWearable = "18.1.0"
 gradleVersionUp = "0.51.0"
 versionCatalogUpdate = "0.8.4"
+dependencyAnalysis = "1.29.0"
 
 [libraries]
+# gradle library (pluginsで読み込みに使うidではなく、gradle plugin portalに登録されている完全修飾名を使う)
+# (自作プラグインで読み込むために、対象のプラグインにアクセスする必要があるため)
+# 同時にbundle pluginsにも追加する必要がある
 androidGradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
 kotlinGradlePlugin = { group = "org.jetbrains.kotlin", name = "kotlin-gradle-plugin", version.ref = "kotlin" }
 composeJbGradlePlugin = { group = "org.jetbrains.compose", name = "compose-gradle-plugin", version.ref = "composeJb" }
@@ -62,6 +66,7 @@ completeKotlinPlugin = { module = "com.louiscad.complete-kotlin:plugin", version
 ossLicensesPlugin = { group = "com.google.android.gms", name = "oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
 gradleVersionUpGradlePlugin = { module = "com.github.ben-manes:gradle-versions-plugin", version.ref = "gradleVersionUp" }
 versionCatalogUpdatePlugin = { module = "nl.littlerobots.vcu:plugin", version.ref = "versionCatalogUpdate" }
+dependencyAnalysisPlugin = { module = "com.autonomousapps:dependency-analysis-gradle-plugin", version.ref = "dependencyAnalysis" }
 
 androidDesugarJdkLibs = { group = "com.android.tools", name = "desugar_jdk_libs", version.ref = "androidDesugarJdkLibs" }
 
@@ -183,6 +188,7 @@ kspGradlePlugin = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 ossLicensesPlugin = { id = "com.google.android.gms.oss-licenses-plugin", version.ref = "ossLicensesPlugin" }
 gradleVersionUpPlugin = { id = "com.github.ben-manes.versions", version.ref = "gradleVersionUp" }
 versionCatalogUpdatePlugin = { id = "nl.littlerobots.version-catalog-update", version.ref = "versionCatalogUpdate" }
+dependencyAnalysisPlugin = { id = "com.autonomousapps.dependency-analysis", version.ref = "dependencyAnalysis" }
 
 [bundles]
 # gradle pluginで読み込む必要があるものを設定
@@ -201,4 +207,5 @@ plugins = [
     "firebaseCrashlyticsGradlePlugin",
     "gradleVersionUpGradlePlugin",
     "versionCatalogUpdatePlugin",
+    "dependencyAnalysisPlugin",
 ]

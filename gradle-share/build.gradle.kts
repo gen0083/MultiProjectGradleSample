@@ -84,5 +84,9 @@ gradlePlugin {
             id = "jp.gcreate.versionCatalogUpdate"
             implementationClass = "jp.gcreate.gradleshare.plugin.VersionCatalogUpdatePlugin"
         }
+        register("dependencyAnalysisPlugin") {
+            id = "jp.gcreate.dependencyAnalysis"
+            implementationClass = "jp.gcreate.gradleshare.plugin.DependencyAnalysisPlugin"
+        }
     }
 }
