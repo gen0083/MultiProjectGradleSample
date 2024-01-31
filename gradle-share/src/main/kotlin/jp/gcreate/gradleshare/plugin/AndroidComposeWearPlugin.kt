@@ -12,6 +12,7 @@ import jp.gcreate.gradleshare.dsl.testImplementation
 import jp.gcreate.gradleshare.dsl.version
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.api.artifacts.MinimalExternalModuleDependency
 import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -47,6 +48,7 @@ class AndroidComposeWearPlugin : Plugin<Project> {
                 implementation(libs.library("wearComposeMaterial"))
                 // test dependencies
                 testImplementation(libs.library("junit"))
+                androidTestImplementation(platform(libs.library("composeBom")) as MinimalExternalModuleDependency)
                 androidTestImplementation(libs.library("androidxTestExtJunit"))
                 androidTestImplementation(libs.library("androidxTestEspressoEspressoCore"))
                 androidTestImplementation(libs.library("composeUiTestJunit4"))
