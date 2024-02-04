@@ -80,6 +80,10 @@ gradlePlugin {
             id = "jp.gcreate.ossLicenses"
             implementationClass = "jp.gcreate.gradleshare.plugin.OssLicensesPlugin"
         }
+        register("roomAndroidPlugin") {
+            id = "jp.gcreate.db.android.room"
+            implementationClass = "jp.gcreate.gradleshare.plugin.DbAndroidRoomPlugin"
+        }
         register("versionCatalogUpdatePlugin") {
             id = "jp.gcreate.versionCatalogUpdate"
             implementationClass = "jp.gcreate.gradleshare.plugin.VersionCatalogUpdatePlugin"
