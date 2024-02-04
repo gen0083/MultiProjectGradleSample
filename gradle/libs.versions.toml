@@ -5,7 +5,7 @@ targetSdk = "33"
 minSdk = "23"
 compileSdk = "34"
 # project uses java version
-jvmVersion = "11"
+jvmVersion = "17"
 # kotlin specific
 # ksp version: see
 kotlin = "1.9.22"
