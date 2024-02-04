@@ -17,7 +17,16 @@ class VersionCatalogUpdatePlugin : Plugin<Project> {
             versionCatalogUpdate {
                 sortByKey.set(false)
                 pin {
-                    versions.addAll("targetSdk")
+                    versions.addAll(
+                        // androidプロジェクトで使用するバージョンは固定(勝手にあげられたら困る)
+                        "androidGradlePlugin", "targetSdk", "compileSdk", "minSdk",
+                        // プロジェクトで使うJvmのバージョンも固定
+                        "jvmVersion",
+                        // kotlinのバージョンも勝手にあげられては困る（kspと関連する）
+                        "kotlin", "ksp",
+                        // composeのバージョンも勝手に上げられると困る（バージョンの指定があるため）
+                        "composeBom", "composeJb", "composeCompiler", "composeWear",
+                    )
                 }
                 keep {
                     keepUnusedLibraries.set(true)
