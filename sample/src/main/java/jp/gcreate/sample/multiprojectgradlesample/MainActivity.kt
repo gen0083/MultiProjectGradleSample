@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val greeting = Greeting()
         setContent {
             val state by viewModel.state.collectAsState()
+            val book by viewModel.book.collectAsState()
 
             Column(
                 modifier = Modifier.fillMaxSize(),
@@ -48,6 +49,10 @@ class MainActivity : AppCompatActivity() {
                 Button(onClick = { viewModel.increment() }) {
                     Text(text = "value is $state")
                 }
+                Button(onClick = { viewModel.getBook() }) {
+                    Text(text = "get from database")
+                }
+                Text(text = book)
             }
         }
     }

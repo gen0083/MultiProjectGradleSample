@@ -21,6 +21,9 @@ class DbAndroidRoomPlugin : Plugin<Project> {
                 apply("com.google.devtools.ksp")
             }
             android {
+                sourceSets {
+                    getByName("androidTest").assets.srcDirs("$projectDir/schemas")
+                }
                 dependencies {
                     implementation(libs.library("roomRuntime"))
                     ksp(libs.library("roomCompiler"))
