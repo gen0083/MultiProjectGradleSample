@@ -10,4 +10,5 @@ data class Book(
     @ColumnInfo val title: String,
     @ColumnInfo val author: String,
     @ColumnInfo val price: Int,
+    @ColumnInfo(defaultValue = "2024") val year: Int,
 )

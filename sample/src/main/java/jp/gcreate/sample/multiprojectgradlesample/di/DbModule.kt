@@ -21,7 +21,6 @@ object DbModule {
             "book_database"
         )
             .allowMainThreadQueries()
-            .fallbackToDestructiveMigration()
             .build()
     }
 
