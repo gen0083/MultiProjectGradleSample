@@ -3,7 +3,9 @@ package jp.gcreate.gradleshare.plugin
 import com.google.devtools.ksp.gradle.KspTaskMetadata
 import jp.gcreate.gradleshare.dsl.android
 import jp.gcreate.gradleshare.dsl.kotlin
+import jp.gcreate.gradleshare.dsl.libs
 import jp.gcreate.gradleshare.dsl.setupAndroid
+import jp.gcreate.gradleshare.dsl.version
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.withType
@@ -19,7 +21,7 @@ class KmpAndroidPlugin : Plugin<Project> {
                 androidTarget {
                     compilations.all {
                         kotlinOptions {
-                            jvmTarget = "11"
+                            jvmTarget = libs.version("jvmVersion")
                         }
                     }
                 }
