@@ -30,7 +30,7 @@ androidxLifecycleProcess = "2.6.2"
 # https://developer.android.com/jetpack/androidx/releases/compose-kotlin?#pre-release_kotlin_compatibility
 composeBom = "2023.10.01"
 composeCompiler = "1.5.8"
-composeJb = "1.5.0"
+composeJb = "1.5.12"
 composeMaterial3 = "1.2.0-alpha07"
 composeHiltNavigatiaon = "1.0.0"
 composeWear = "1.2.1"
