@@ -17,7 +17,7 @@ fun Project.androidLibrary(action: LibraryExtension.() -> Unit) {
     extensions.configure(action)
 }
 
-fun Project.android(action: TestedExtension.() -> Unit) {
+fun Project.android(action: BaseAppModuleExtension.() -> Unit) {
     extensions.configure(action)
 }
 
