@@ -1,13 +1,16 @@
 package jp.gcreate.gradleshare.plugin
 
+import com.android.build.api.dsl.LibraryExtension
 import com.google.devtools.ksp.gradle.KspTaskMetadata
-import jp.gcreate.gradleshare.dsl.android
 import jp.gcreate.gradleshare.dsl.kotlin
+import jp.gcreate.gradleshare.dsl.library
 import jp.gcreate.gradleshare.dsl.libs
-import jp.gcreate.gradleshare.dsl.setupAndroid
 import jp.gcreate.gradleshare.dsl.version
+import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
 import org.gradle.api.Project
+import org.gradle.kotlin.dsl.configure
+import org.gradle.kotlin.dsl.dependencies
 import org.gradle.kotlin.dsl.withType
 
 @Suppress("unused")
@@ -27,7 +30,28 @@ class KmpAndroidPlugin : Plugin<Project> {
                 }
             }
             android {
-                setupAndroid()
+                namespace?.let {
+                    this.namespace = it
+                }
+                compileSdk = libs.version("compileSdk").toInt()
+
+                defaultConfig {
+                    minSdk = libs.version("minSdk").toInt()
+                }
+
+                compileOptions {
+                    sourceCompatibility = JavaVersion.toVersion(libs.version("jvmVersion").toInt())
+                    targetCompatibility = JavaVersion.toVersion(libs.version("jvmVersion").toInt())
+                    isCoreLibraryDesugaringEnabled = true
+                }
+                dependencies {
+                    add("coreLibraryDesugaring", libs.library("androidDesugarJdkLibs"))
+                }
+                testOptions {
+                    unitTests {
+                        isIncludeAndroidResources = true
+                    }
+                }
                 sourceSets {
                     getByName("main") {
                         assets.srcDirs("src/androidMain/assets")
@@ -46,5 +70,9 @@ class KmpAndroidPlugin : Plugin<Project> {
                 notCompatibleWithConfigurationCache("Configuration cache not supported due to serialization")
             }
         }
+    }
+
+    private fun Project.android(action: LibraryExtension.() -> Unit) {
+        extensions.configure(action)
     }
 }
